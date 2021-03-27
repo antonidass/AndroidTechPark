@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <integer name="PORTRAIT_COLS">3</integer>
-    <integer name="LANDSCAPE_COLS">4</integer>
-</resources>
