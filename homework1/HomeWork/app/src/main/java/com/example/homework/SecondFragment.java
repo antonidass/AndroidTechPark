@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class SecondFragment extends Fragment {
-    private String number;
-    private int color;
-
     // Ключи для доступа к сохраненному состоянию
     private static final String data_key = "data";
     private static final String color_key = "color";
+
+    private String number;
+    private int color;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
