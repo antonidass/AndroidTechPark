@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyListAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
+public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.RecyclerViewHolder> {
     private final ArrayList<Integer> numbers;
     private final MyCallback fragmentCallback;
     private final Context context;
@@ -48,17 +48,18 @@ public class MyListAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
     public int getItemCount() {
         return numbers.size();
     }
+
+    static class RecyclerViewHolder extends RecyclerView.ViewHolder {
+        private final TextView numberView;
+
+        public RecyclerViewHolder(@NonNull View itemView) {
+            super(itemView);
+            numberView = itemView.findViewById(R.id.randomText);
+        }
+
+        public TextView getView() {
+            return numberView;
+        }
+    }
 }
 
-class RecyclerViewHolder extends RecyclerView.ViewHolder {
-    private final TextView numberView;
-
-    public RecyclerViewHolder(@NonNull View itemView) {
-        super(itemView);
-        numberView = itemView.findViewById(R.id.randomText);
-    }
-
-    public TextView getView() {
-        return numberView;
-    }
-}
